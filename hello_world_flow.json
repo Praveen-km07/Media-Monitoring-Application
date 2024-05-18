@@ -1,0 +1,87 @@
+[
+    {
+        "id": "c497addc79efa5b8",
+        "type": "tab",
+        "label": "Hello world",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0a521dcedf16fa7e",
+        "type": "template",
+        "z": "c497addc79efa5b8",
+        "name": "Hello World HTML Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Hello World</title>\n    <link href=\"https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css\" rel=\"stylesheet\">\n</head>\n<body>\n    <h1>Hello, World!</h1>\n</body>\n</html>\n",
+        "output": "str",
+        "x": 440,
+        "y": 60,
+        "wires": [
+            [
+                "8b6b37661cbd0a64"
+            ]
+        ]
+    },
+    {
+        "id": "8b6b37661cbd0a64",
+        "type": "http response",
+        "z": "c497addc79efa5b8",
+        "name": "Send Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "0a45d9413ce8ced1",
+        "type": "http in",
+        "z": "c497addc79efa5b8",
+        "name": "HTTP GET /hello",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 60,
+        "wires": [
+            [
+                "0a521dcedf16fa7e"
+            ]
+        ]
+    },
+    {
+        "id": "cd75c950fd568bce",
+        "type": "comment",
+        "z": "c497addc79efa5b8",
+        "name": "http in",
+        "info": "",
+        "x": 150,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7861b2f5b4a7d7a4",
+        "type": "comment",
+        "z": "c497addc79efa5b8",
+        "name": "http response",
+        "info": "",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "fb6442906917de60",
+        "type": "comment",
+        "z": "c497addc79efa5b8",
+        "name": "template",
+        "info": "",
+        "x": 440,
+        "y": 140,
+        "wires": []
+    }
+]
